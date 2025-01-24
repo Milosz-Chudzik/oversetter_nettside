@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="registrer.css">
+<body>
+    <div class="registrer">
+        <button onclick="toggleregistrer()">registrer bruker</button>
+        <div id="registrerModal" class="registrer">
+          <div class="registrer-content">
+            <form class="registrer-modal-content" action="/registrer">
+                <div class="container">
+                <h1>registrer bruker</h1>
+                <hr>
+                <label for="email"><b>email</b></label>
+                <input type="email" name="email" required>
+        
+                <label for="psw"><b>Passord</b></label>
+                <input type="password" name="passord" required>
+                <button type="submit" class="signupbtn">opprett bruker</button>
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">gå tilbake</button>
+                    
+                </div>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <script>
+          function toggleregistrer() {
+            const modal = document.getElementById("registrerModal");
+            modal.style.display =
+              modal.style.display === "flex" ? "none" : "flex";
+          }
+        </script>
+</body>
+</html>

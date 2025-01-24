@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oversetter nettside</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bokser">
+      <div class="login">
+        <button onclick="toggleinnlogging()">Login</button>
+        <div id="loginModal" class="innlogging">
+          <div class="innlogging-content">
+            <span class="close" onclick="toggleinnlogging()">&times;</span>
+            <h2>Login</h2>
+            <div class="boksNede">
+              <input type="text" placeholder="Username" required />
+              <input type="password" placeholder="Password" required />
+              <button type="submit">Login</button>
+            </div>
+          </div>
+        </div>
+        <script>
+          function toggleinnlogging() {
+            const modal = document.getElementById("loginModal");
+            modal.style.display =
+              modal.style.display === "flex" ? "none" : "flex";
+          }
+        </script>
+      </div>
+      <button>
+        <div class="bestill">
+          <h1>bestill</h1>
+        </div>
+      </button>
+      <button>
+        <div class="registrer">
+          <h1>registrer</h1>
+        </div>
+      </button>
+      <button>
+        <div class="dinebestillinger">
+          <h1>dine bestillinger</h1>
+        </div>
+      </button>
+    </div>
+  </body>
+</html>

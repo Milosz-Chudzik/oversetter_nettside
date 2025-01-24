@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bestill</title>
+    <link rel="stylesheet" href="bestill.css">
+</head>
+<body>
+    <button onclick="togglebestill()">bestill</button>
+    <div id="loginModal" class="bestilling">
+        <div class="bestilling-content">
+            <span class="close" onclick="togglebestill()">&times;</span>
+            <h2>hva ønsker du å bestille</h2>
+            <div class="boksNede-bestilling">
+                <input type="text" placeholder="tjeneste" required>
+                <input type="text" placeholder="epost" required>
+                <input type="text" placeholder="" required>
+                <button type="submit">bestill</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglebestill() {
+            const modal = document.getElementById('loginModal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

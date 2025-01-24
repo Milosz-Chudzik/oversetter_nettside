@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Modal</title>
+  <link rel="stylesheet" href="logginn.css">
+</head>
+<body>
+  <div class="registrer">
+    <button onclick="toggleinnlogging()">Logg inn</button>
+
+    <div id="innlogging" class="innlogging">
+      <div class="innlogging-content">
+        <span class="close" onclick="toggleinnlogging()">&times;</span>
+        <form method="post" class="innlogging-modal-content">
+          <div class="container">
+            <label for="epost">E-post:</label>
+            <input type="email" id="epost" name="epost" required />
+            <label for="passord">Passord:</label>
+            <input type="password" id="passord" name="passord" required />
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleinnlogging() {
+      const modal = document.getElementById("innlogging");
+      modal.style.display = modal.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>

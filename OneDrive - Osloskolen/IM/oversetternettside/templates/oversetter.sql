@@ -2,10 +2,7 @@ create database oversetter
 
 create table IF NOT EXISTS brukere (
     user_id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    username varchar(255) NOT NULL,
-    fornavn varchar(255) NOT NULL,
-    etternavn varchar(255) NOT NULL,
-    telefon int(8) UNIQUE NOT NULL,
+    email varchar(255) NOT NULL unique,
     passord varchar(255) NOT NULL
 );
 
@@ -25,3 +22,5 @@ create table IF NOT EXISTS ytelser (
 );
 
 insert into ytelser (ytelse_id, beskrivelse, pris) values (1, 'oversettelse av bok', '200kr');
+insert into ytelser (ytelse_id, beskrivelse, pris) values (2, 'oversettelse av dokument', '100kr');
+insert into ytelser (ytelse_id, beskrivelse, pris) values (3, 'oversettelse i fysisk samtale' '100kr');

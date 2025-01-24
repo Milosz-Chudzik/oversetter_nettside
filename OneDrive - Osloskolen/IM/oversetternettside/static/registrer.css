@@ -21,7 +21,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 250px;
   opacity: 0.9;
 }
 
@@ -31,26 +31,24 @@ button {
 }
 
 .modal {
-  position:absolute;top:0px;
-  z-index:10;
   display: flex;
-  justify-content: center; 
-  align-items: center;   
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  overflow: auto;
-  position: fixed;        
 }
 
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
+.registrer-modal-content {
   width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 
 hr {
